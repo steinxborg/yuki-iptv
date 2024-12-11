@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Application
+Name=yuki-iptv
+Comment=IPTV player with EPG support
+Comment[nn]=IPTV-spelar med EPG-støtte
+Comment[zh_CN]=支持 EPG 的 IPTV 播放器
+Comment[es]=Reproductor IPTV con soporte EPG
+Comment[tr]=EPG destekli IPTV oynatıcı
+Comment[pt_BR]=Playlist IPTV com suporte EPG
+Comment[sv_SE]=IPTV-spelare med EPG-stöd
+Comment[nl]=Iptv-speler met epg-ondersteuning
+Comment[pl]=Odtwarzacz IPTV z obsługą EPG
+Comment[fr]=Lecteur IPTV avec support d'EPG
+Comment[ru]=IPTV плеер с поддержкой EPG
+Exec=yuki-iptv
+Icon=yuki-iptv
+Categories=AudioVideo;Video;Player;Recorder;TV;
+Keywords=Television;Stream;
