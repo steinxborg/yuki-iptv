@@ -1,0 +1,60 @@
+name: Clone Yuki
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs daily at midnight UTC
+  workflow_dispatch:     # Allows manual trigger from the Actions tab
+
+jobs:
+  fetch_yuki:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout GitHub repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+
+      - name: Clone Codeberg Repository
+        run: |
+          rm -rf temp-repo
+          git clone https://codeberg.org/liya/yuki-iptv.git temp-repo
+
+      - name: Prepare Sync Directory
+        run: |
+          # Create a temporary sync directory
+          mkdir -p temp-sync
+
+          # Copy all files from cloned repo to temp-sync
+          cp -R temp-repo/* temp-sync/
+
+          # Remove README.md
+          rm -f temp-sync/README.md
+
+          # Preserve existing GitHub workflows
+          mkdir -p temp-sync/.github/workflows
+          cp -R .github/workflows/* temp-sync/.github/workflows/ 2>/dev/null || true
+
+      - name: Push to GitHub
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd temp-sync
+          
+          # Initialize git in the sync directory
+          git init
+          git config user.name 'GitHub Actions Bot'
+          git config user.email 'actions@github.com'
+
+          # Add all files
+          git add .
+
+          # Commit changes if there are any
+          git commit -m "Sync from Codeberg: $(date +"%Y-%m-%d %H:%M:%S") - Removed README.md" || exit 0
+
+          # Force push to GitHub, preserving workflows
+          git push https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main --force
