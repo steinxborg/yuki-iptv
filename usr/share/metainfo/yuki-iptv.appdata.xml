@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2021, 2022 Astroncia -->
+<!-- Copyright 2023-2025 liya <liyaastrova@proton.me> -->
+<component type="desktop">
+  <id>yuki-iptv.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>yuki-iptv</name>
+  <summary>IPTV player with EPG support</summary>
+
+  <description>
+    <p>
+      IPTV player with many features, such as:
+    </p>
+    <ul>
+       <li>M3U / XSPF playlists support</li>
+       <li>XTream API support</li>
+       <li>TV guide (EPG) support</li>
+       <li>Stream recording</li>
+       <li>Playlist editor</li>
+       <li>TV archive / catchup</li>
+       <li>and many more...</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">yuki-iptv.desktop</launchable>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://codeberg.org/attachments/f0b6d5bb-fa6f-4b16-a375-9e2f9775d6dd</image>
+      <caption>The main window showing the application in action</caption>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="0.0.19" date="2025-06-16">
+      <description>
+        <p>Update python-mpv</p>
+        <p>l10n: Update translations</p>
+        <p>Activate word wrap for QListWidgets</p>
+        <p>Multi-EPG: add channel group filter</p>
+        <p>Less transparency for fullscreen panels</p>
+        <p>Add Enable transparency for floating panels option</p>
+      </description>
+    </release>
+    <release version="0.0.18" date="2025-01-08">
+      <description>
+        <p>Translations update from Codeberg Translate</p>
+        <p>Show channel name in playlist dock</p>
+        <p>Add size grip for fullscreen playlist</p>
+      </description>
+    </release>
+    <release version="0.0.17" date="2024-12-20">
+      <description>
+        <p>Playlist window refactoring</p>
+        <p>Remove Wand dependency</p>
+        <p>Set OSC type to slimbox</p>
+        <p>Set vo to gpu-next,gpu,x11</p>
+      </description>
+    </release>
+    <release version="0.0.16" date="2024-12-06">
+      <description>
+        <p>Add Multi-EPG</p>
+        <p>Add support for "Origin" HTTP header</p>
+        <p>Better mpv options parsing</p>
+        <p>Fix XTream crash with empty category id</p>
+      </description>
+    </release>
+    <release version="0.0.15" date="2024-10-23">
+      <description>
+        <p>Translations update from Codeberg Translate</p>
+        <p>Fix exInMainThread_partial crash</p>
+        <p>Remove unneeded player options</p>
+        <p>Add Low latency mode option</p>
+      </description>
+    </release>
+    <release version="0.0.14" date="2024-10-06">
+      <description>
+        <p>l10n: Update translations</p>
+        <p>Update XTream library</p>
+        <p>Update python-mpv</p>
+        <p>Remove support for Pillow</p>
+        <p>Remove support for GNOME inhibit</p>
+        <p>Remove support for hardware acceleration</p>
+        <p>Fix XTream crash with empty category id</p>
+        <p>Fix XTream crash when creating cache directory</p>
+        <p>Disable styles redefinition</p>
+        <p>Always enable catchup</p>
+        <p>Async XTream series loading</p>
+      </description>
+    </release>
+    <release version="0.0.13" date="2024-09-02">
+      <description>
+        <p>l10n: Update translations</p>
+        <p>debian/control: Move yt-dlp to recommends</p>
+        <p>Add sorting for categories</p>
+        <p>Show EPG description</p>
+        <p>Show EPG percentage more precisely</p>
+        <p>Drop Qt 5 support</p>
+        <p>Add support for GNOME and org.freedesktop.ScreenSaver Inhibit</p>
+      </description>
+    </release>
+    <release version="0.0.12" date="2024-07-04">
+      <description>
+        <p>Translations update from Weblate</p>
+        <p>Change record format to ts</p>
+        <p>Load Qt system translations</p>
+        <p>Add resize grip to playlist in separate window</p>
+        <p>Add support for custom channel logos</p>
+        <p>Better libmpv API version check</p>
+      </description>
+    </release>
+    <release version="0.0.11" date="2024-04-19">
+      <description>
+        <p>Translations update from Weblate</p>
+        <p>libmpv 0.38.0 fixes</p>
+        <p>Restore channel sorting</p>
+        <p>More verbose exceptions</p>
+        <p>Add "Floating panel position" - "Separate window" option</p>
+        <p>Add option "Hide playlist by left mouse click"</p>
+        <p>Fix "Bad paging"</p>
+        <p>Fix "Jumpy label"</p>
+        <p>Fix "No autoplay after Playing error"</p>
+        <p>Fix "RuntimeError: wrapped C/C++ object of type QAction has been deleted"</p>
+        <p>Fix "Wrong Qt version reported"</p>
+        <p>Disable debug logging for MPRIS</p>
+      </description>
+    </release>
+    <release version="0.0.10" date="2024-03-17">
+      <description>
+        <p>Translations update from Weblate</p>
+        <p>Show channel URL in stream information window</p>
+        <p>Do not crash if save folder is not writable</p>
+        <p>Fix aspect ratio in channel logos</p>
+        <p>xspf: Add support for logos and VLC extensions</p>
+        <p>Fix crash if EPG title is None</p>
+        <p>Fix playing error not shown correctly in fullscreen mode</p>
+        <p>Remove channel sorting</p>
+        <p>Fix MPRIS</p>
+        <p>Fix VOD matching</p>
+        <p>Add EPG id for XTream channels</p>
+      </description>
+    </release>
+    <release version="0.0.9" date="2024-01-23">
+      <description>
+        <p>l10n: Update translations</p>
+        <p>Respect XDG environment variables</p>
+        <p>Fix YouTube channels recording</p>
+        <p>Add file filter when adding playlist</p>
+        <p>Add file filter when opening file in M3U editor</p>
+      </description>
+    </release>
+    <release version="0.0.8" date="2023-11-07">
+      <description>
+        <p>l10n: Update translations</p>
+        <p>Fix parsing channel name with comma</p>
+        <p>Show audio/video desynchronization</p>
+        <p>Show group in channel tooltip</p>
+        <p>Add ability to select EPG date</p>
+        <p>Fix osc disabling via mpv options</p>
+        <p>Fix crashing if save settings called when EPG is updating</p>
+        <p>Fix page selection taking focus and blocking keybinds</p>
+        <p>Fix crash in channel search</p>
+        <p>Add rewind</p>
+        <p>Add frame-step and frame-back-step commands</p>
+        <p>Fix loading playlists with trailing spaces in URL</p>
+        <p>Fix crashing in movies</p>
+        <p>Fix requests timeout</p>
+        <p>Fix changing playlist name when editing it</p>
+        <p>Update XTream library</p>
+        <p>Show XTream expiration dates in playlists window</p>
+        <p>Fix catchup on XTream playlists</p>
+        <p>Load EPG for XTream</p>
+      </description>
+    </release>
+    <release version="0.0.7" date="2023-06-05">
+      <description>
+        <p>Fix encoding in remote playlists</p>
+        <p>Use Wand for channel logos</p>
+        <p>Add tvg-group tag support</p>
+      </description>
+    </release>
+    <release version="0.0.6" date="2023-05-14">
+      <description>
+        <p>Add 'Hide EPG from playlist' option</p>
+        <p>Add 'Multicast optimization' option</p>
+        <p>Fix control panel not aware of multiple screens</p>
+        <p>Detect group in xspf playlists</p>
+        <p>Increase connect and read timeout</p>
+      </description>
+    </release>
+    <release version="0.0.5" date="2023-05-02">
+      <description>
+        <p>Load EPG for all days available</p>
+      </description>
+    </release>
+    <release version="0.0.4" date="2023-04-15">
+      <description>
+        <p>Optimize channel logos load</p>
+        <p>Show warning if ffmpeg crashed</p>
+        <p>Remember video / audio / subtitle tracks for channel</p>
+        <p>Add subtitles selector</p>
+        <p>Fix pause button behaviour on changing channels</p>
+        <p>UI improvements</p>
+        <p>packaging: add python3-pydbus to depends</p>
+      </description>
+    </release>
+    <release version="0.0.3" date="2023-04-09">
+      <description>
+        <p>EPG: trying to fix EPG cache load freezing</p>
+        <p>EPG: fix XMLTV timezone parsing</p>
+        <p>EPG: re-implement JTV support from scratch</p>
+        <p>EPG: Add support for XMLTV inside zip archive</p>
+        <p>Show Qt and libmpv versions in about window</p>
+        <p>Add TV.ALL EPG format support</p>
+        <p>Fix autoreconnection option</p>
+        <p>Show logo when file ended</p>
+        <p>Fix channel looping</p>
+      </description>
+    </release>
+    <release version="0.0.2" date="2023-04-06">
+      <description>
+        <p>l10n: Update translations</p>
+        <p>Fix disabling osc via MPV options</p>
+        <p>Make libmpv respect loglevel option</p>
+        <p>Lazy load EPG cache</p>
+        <p>Lazy load channel logos</p>
+        <p>Fix crash if no TV channels found</p>
+        <p>tv guide: add channel search</p>
+        <p>scheduler: add channel search</p>
+        <p>channel logos: respect useragent and referer when downloading</p>
+        <p>settings: disable hardware acceleration and deinterlace by default</p>
+        <p>Change default User-Agent to Mozilla/5.0</p>
+        <p>Allow custom HTTP Referer for individual channels</p>
+        <p>Allow custom user agent</p>
+        <p>Verbose EPG loading</p>
+        <p>Show channel name on changing in fullscreen mode</p>
+        <p>Fix custom channel sort in multiple playlists with same channel name</p>
+        <p>Fix favourites in multiple playlists with same channel name</p>
+        <p>Fix channel settings in multiple playlists with same channel name</p>
+        <p>Update pyxtream library</p>
+        <p>Check playlist name is not empty before saving</p>
+        <p>Drop default EPG URLs</p>
+        <p>Drop import from Hypnotix</p>
+      </description>
+    </release>
+    <release version="0.0.1" date="2023-03-27">
+      <description>
+        <p>Change project name to yuki-iptv</p>
+      </description>
+    </release>
+  </releases>
+
+  <url type="homepage">https://codeberg.org/liya/yuki-iptv</url>
+  <url type="bugtracker">https://codeberg.org/liya/yuki-iptv/issues</url>
+  <url type="translate">https://translate.codeberg.org/engage/yuki-iptv/</url>
+  <developer_name>liya</developer_name>
+  <translation type="gettext">yuki-iptv</translation>
+  <content_rating type="oars-1.1"/>
+</component>
